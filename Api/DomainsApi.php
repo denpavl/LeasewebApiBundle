@@ -30,7 +30,7 @@ class DomainsApi extends AbstractApiCall
     {
         return $this->apiCaller->call(new HttpGetJson(
             sprintf('%s/%s', $this->apiUrl, self::RESOURCE),
-            [],
+            array(),
             $this->asAssociativeArray,
             $this->getOptions()
         ));
@@ -47,7 +47,7 @@ class DomainsApi extends AbstractApiCall
     {
         return $this->apiCaller->call(new HttpGetJson(
             sprinf('%s/%s/%s', $this->apiUrl, self::RESOURCE, $domain),
-            [],
+            array(),
             $this->asAssociativeArray,
             $this->getOptions()
         ));
@@ -65,9 +65,9 @@ class DomainsApi extends AbstractApiCall
     {
         return $this->apiCaller->call(new HttpPutJson(
             sprinf('%s/%s/%s', $this->apiUrl, self::RESOURCE, $domain),
-            [
+            array(
                 'ttl' => $ttl
-            ],
+            ),
             $this->asAssociativeArray,
             $this->getOptions()
         ));
@@ -84,7 +84,7 @@ class DomainsApi extends AbstractApiCall
     {
         return $this->apiCaller->call(new HttpGetJson(
             sprinf('%s/%s/%s/dnsRecords', $this->apiUrl, self::RESOURCE, $domain),
-            [],
+            array(),
             $this->asAssociativeArray,
             $this->getOptions()
         ));
@@ -103,11 +103,11 @@ class DomainsApi extends AbstractApiCall
      */
     public function createDNSRecords($domain, $host, $content, $type, $priority = null)
     {
-        $data = [
+        $data = array(
             'host' => $host,
             'type' => $type,
             'content' => $content,
-        ];
+        );
 
         if ($priority !== null && ($type == 'MX' || $type == 'SRV')) {
             $data['priority'] = $priority;
@@ -133,7 +133,7 @@ class DomainsApi extends AbstractApiCall
     {
         return $this->apiCaller->call(new HttpGetJson(
             sprinf('%s/%s/%s/dnsRecords/%d', $this->apiUrl, self::RESOURCE, $domain, $dnsRecordId),
-            [],
+            array(),
             $this->asAssociativeArray,
             $this->getOptions()
         ));
@@ -153,12 +153,12 @@ class DomainsApi extends AbstractApiCall
      */
     public function updateDNSRecord($domain, $dnsRecordId, $host, $content, $type, $priority = null)
     {
-        $data = [
+        $data = array(
             'id' => $dnsRecordId,
             'host' => $host,
             'type' => $type,
             'content' => $content,
-        ];
+        );
 
         if ($priority !== null && ($type == 'MX' || $type == 'SRV')) {
             $data['priority'] = $priority;
@@ -184,7 +184,7 @@ class DomainsApi extends AbstractApiCall
     {
         return $this->apiCaller->call(new HttpDeleteJson(
             sprinf('%s/%s/%s/dnsRecords/%d', $this->apiUrl, self::RESOURCE, $domain, $dnsRecordId),
-            [],
+            array(),
             $this->asAssociativeArray,
             $this->getOptions()
         ));
