@@ -2,7 +2,7 @@
     "name": "dieselproxy/leaseweb-api-bundle",
     "type": "symfony-bundle",
     "description": "Symfony2 Bundle for LeaseWeb APIs",
-    "keywords": ["LeaseWeb","API","cURL","Symfony2"],
+    "keywords": ["LeaseWeb","API","Symfony2"],
     "homepage": "https://github.com/dieselproxy",
     "license": "MIT",
     "authors": [
@@ -13,7 +13,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.3.2",
         "symfony/framework-bundle": ">=2.1",
         "leaseweb/api-caller-bundle": "1.2.*"
     },

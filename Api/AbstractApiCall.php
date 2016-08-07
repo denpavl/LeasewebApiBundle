@@ -54,8 +54,8 @@ abstract class AbstractApiCall
      */
     protected function getOptions()
     {
-        return [
-            'HTTPHEADER' => ['X-Lsw-Auth' => $this->apiKey],
-        ];
+        return array(
+            'HTTPHEADER' => array('X-Lsw-Auth' => $this->apiKey),
+        );
     }
 }
