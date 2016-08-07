@@ -1,0 +1,8 @@
+services:
+    leaseweb_api.domains_api:
+        class: Dp\LeasewebApiBundle\Api\DomainsApi
+        arguments:
+            - '@api_caller'
+            - '%leaseweb_api.api_url%'
+            - '%leaseweb_api.api_key%'
+            - %leaseweb_api.as_associative_array%

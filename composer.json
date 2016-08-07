@@ -1,0 +1,31 @@
+{
+    "name": "dieselproxy/leaseweb-api-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 Bundle for LeaseWeb APIs",
+    "keywords": ["LeaseWeb","API","cURL","Symfony2"],
+    "homepage": "https://github.com/dieselproxy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Denis Pavluchenko",
+            "email": "den.pavl@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/framework-bundle": ">=2.1",
+        "leaseweb/api-caller-bundle": "1.2.*"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-0": { "Dp\\LeasewebApiBundle": "" }
+    },
+    "target-dir": "Dp/LeasewebApiBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
