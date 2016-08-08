@@ -6,3 +6,43 @@ services:
             - '%leaseweb_api.api_url%'
             - '%leaseweb_api.api_key%'
             - %leaseweb_api.as_associative_array%
+
+    leaseweb_api.bare_metal_servers_api:
+        class: Dp\LeasewebApiBundle\Api\BareMetalServersApi
+        arguments:
+            - '@api_caller'
+            - '%leaseweb_api.api_url%'
+            - '%leaseweb_api.api_key%'
+            - %leaseweb_api.as_associative_array%
+
+    leaseweb_api.private_networks_api:
+        class: Dp\LeasewebApiBundle\Api\PrivateNetworksApi
+        arguments:
+            - '@api_caller'
+            - '%leaseweb_api.api_url%'
+            - '%leaseweb_api.api_key%'
+            - %leaseweb_api.as_associative_array%
+
+    leaseweb_api.isp_api:
+        class: Dp\LeasewebApiBundle\Api\IpsApi
+        arguments:
+            - '@api_caller'
+            - '%leaseweb_api.api_url%'
+            - '%leaseweb_api.api_key%'
+            - %leaseweb_api.as_associative_array%
+
+    leaseweb_api.rescue_images_api:
+        class: Dp\LeasewebApiBundle\Api\RescueImagesApi
+        arguments:
+            - '@api_caller'
+            - '%leaseweb_api.api_url%'
+            - '%leaseweb_api.api_key%'
+            - %leaseweb_api.as_associative_array%
+
+    leaseweb_api.operating_systems_api:
+        class: Dp\LeasewebApiBundle\Api\OperatingSystemsApi
+        arguments:
+            - '@api_caller'
+            - '%leaseweb_api.api_url%'
+            - '%leaseweb_api.api_key%'
+            - %leaseweb_api.as_associative_array%
