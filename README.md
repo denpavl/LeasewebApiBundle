@@ -15,7 +15,7 @@ Bundle for LeaseWeb API (http://developer.leaseweb.com/api-docs/?php)
 
 Add LeasewebApiBundle in your composer.json:
 
-``` json
+``` js
     "repositories": [
         {
             "type": "git",
